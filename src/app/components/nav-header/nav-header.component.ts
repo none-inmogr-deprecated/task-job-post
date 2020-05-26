@@ -1,6 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { AppConfigService } from "../../services/app-config.service";
-import { BackendService } from "../../services/backend.service";
+import { AppConfigService, BackendService } from "../../services";
 
 @Component({
     selector: "app-nav-header",
