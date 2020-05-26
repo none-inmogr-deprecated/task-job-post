@@ -1,11 +1,20 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
-import { JobListComponent } from "./pages";
+import { JobListComponent, JobDescriptionComponent } from "./pages";
 
 const routes: Routes = [
     {
         path: "",
         component: JobListComponent,
+    },
+    {
+        path: "job",
+        children: [
+            {
+                path: "**",
+                component: JobDescriptionComponent,
+            },
+        ]
     },
     {
         path: "**",
