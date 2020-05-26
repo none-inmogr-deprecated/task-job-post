@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="py-4">
+        <!-- SPACER -->
+    </div>
+    <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+        <ng-container *ngFor="let item of colIds; let i = index">
+            <ng-container [matColumnDef]="item">
+                <mat-header-cell *matHeaderCellDef>{{ colLabels[i] }}</mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{ element[item] }} </mat-cell>
+            </ng-container>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="colIds"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: colIds"></mat-row>
+    </mat-table>
+    <div class="py-4">
+        <!-- SPACER -->
+    </div>
+</div>

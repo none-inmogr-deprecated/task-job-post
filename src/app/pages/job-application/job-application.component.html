@@ -9,7 +9,7 @@
     <form [formGroup]="application" (ngSubmit)="onSubmit()" *ngIf="application">
         <mat-form-field class="w-100" appearance="outline" color="primary">
             <mat-label>Name</mat-label>
-            <input matInput [formControl]="application.controls.name"/>
+            <input matInput [formControl]="application.controls.name" />
         </mat-form-field>
         <mat-form-field class="w-100" appearance="outline" color="primary">
             <mat-label>Email</mat-label>
