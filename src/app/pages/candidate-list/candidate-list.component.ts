@@ -1,4 +1,6 @@
 import { Component, OnInit } from "@angular/core";
+import { BackendService } from "../../services";
+import { ICandidateItem } from "../../models";
 
 @Component({
     selector: "app-candidate-list",
@@ -6,7 +8,13 @@ import { Component, OnInit } from "@angular/core";
     styleUrls: ["./candidate-list.component.scss"],
 })
 export class CandidateListComponent implements OnInit {
-    constructor() {}
+    colLabels = ["Job ID", "Name", "Email", "Mobile"];
+    colIds = ["jobId", "name", "email", "mobile"];
+    dataSource: ICandidateItem[] = [];
 
-    ngOnInit(): void {}
+    constructor(public backend: BackendService) {}
+
+    ngOnInit(): void {
+        this.dataSource = this.backend.getCandidateList();
+    }
 }
