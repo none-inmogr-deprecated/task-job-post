@@ -22,6 +22,7 @@ import { MatIconModule } from "@angular/material/icon";
 import { MatListModule } from "@angular/material/list";
 import { MatMenuModule } from "@angular/material/menu";
 import { MatToolbarModule } from "@angular/material/toolbar";
+import { MatDialogModule } from "@angular/material/dialog";
 
 import { AppConfigService } from "./services";
 
@@ -30,6 +31,7 @@ import { NavHeaderComponent } from "./components";
 import {
     JobListComponent,
     JobDescriptionComponent,
+    JobApplicationComponent,
 } from "./pages";
 
 @NgModule(
@@ -39,6 +41,7 @@ import {
             NavHeaderComponent,
             JobListComponent,
             JobDescriptionComponent,
+            JobApplicationComponent,
         ],
         imports: [
             BrowserModule,
@@ -58,6 +61,7 @@ import {
             MatListModule,
             MatMenuModule,
             MatToolbarModule,
+            MatDialogModule,
         ],
         providers: [
             {
