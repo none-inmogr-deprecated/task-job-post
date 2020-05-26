@@ -1,6 +1,10 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
-import { JobListComponent, JobDescriptionComponent } from "./pages";
+import {
+    JobListComponent,
+    JobDescriptionComponent,
+    CandidateListComponent,
+} from "./pages";
 
 const routes: Routes = [
     {
@@ -15,6 +19,10 @@ const routes: Routes = [
                 component: JobDescriptionComponent,
             },
         ],
+    },
+    {
+        path: "candidates",
+        component: CandidateListComponent,
     },
     {
         path: "**",
