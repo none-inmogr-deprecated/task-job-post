@@ -12,4 +12,13 @@ export class BackendService {
     getJobList() {
         return JobListData;
     }
+
+    markApplied(id: number) {
+        const index = JobListData.findIndex((item) => item.id === id);
+        if (index === -1) {
+            return false;
+        }
+        JobListData[index].applied = true;
+        return true;
+    }
 }

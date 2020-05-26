@@ -1,5 +1,8 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Inject, Optional } from "@angular/core";
 import { FormGroup, FormControl, Validators } from "@angular/forms";
+import { BackendService } from "../../services";
+import { MatDialogRef, MAT_DIALOG_DATA } from "@angular/material/dialog";
+import { IJobItem } from "../../models";
 
 @Component({
     selector: "app-job-application",
@@ -13,11 +16,15 @@ export class JobApplicationComponent implements OnInit {
         mobile: new FormControl("", [Validators.required]),
     });
 
-    constructor() {}
+    constructor(
+        public backend: BackendService,
+        public dialogRef: MatDialogRef<JobApplicationComponent>,
+        @Optional() @Inject(MAT_DIALOG_DATA) public data: IJobItem,
+    ) {}
 
     ngOnInit(): void {}
 
     onSubmit(): void {
-        // this.application.controls.name
+        this.backend.markApplied(this.data.id);
     }
 }

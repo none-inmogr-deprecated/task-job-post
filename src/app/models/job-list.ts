@@ -6,4 +6,5 @@ export interface IJobItem {
     location: string;
     shortDesc: string;
     fullDesc: string;
+    applied?: boolean;
 }
