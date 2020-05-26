@@ -4,10 +4,8 @@
     </div>
     <ng-container *ngFor="let item of items">
         <div class="pointer row my-3 mx-0 p-3 mat-elevation-z8" [routerLink]="['/job/', item.id]">
-            <div class="col-1">
-                <img [src]="item.companyLogo" alt="logo" class="logo-image-med" />
-            </div>
-            <div class="col-6">
+            <img [src]="item.companyLogo" alt="logo" class="logo-image-med" />
+            <div class="d-flex flex-column flex-1">
                 <h4 class="font-weight-bold">
                     {{ item.title }}
                 </h4>
@@ -15,7 +13,7 @@
                     {{ item.shortDesc }}
                 </small>
             </div>
-            <div class="col-5 text-right">
+            <div class="text-right">
                 <h4>
                     {{ item.companyName }}
                 </h4>
