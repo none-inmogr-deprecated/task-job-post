@@ -35,6 +35,7 @@ import {
     JobListComponent,
     JobDescriptionComponent,
     JobApplicationComponent,
+    CandidateListComponent,
 } from "./pages";
 
 @NgModule(
@@ -45,6 +46,7 @@ import {
             JobListComponent,
             JobDescriptionComponent,
             JobApplicationComponent,
+            CandidateListComponent,
         ],
         imports: [
             BrowserModule,
