@@ -22,9 +22,6 @@ export class JobDescriptionComponent implements OnInit {
     }
 
     openDialogApplication(): void {
-        const dialogRef = this.dialog.open(JobApplicationComponent, { panelClass: "w-50" });
-        dialogRef.afterClosed().subscribe((result) => {
-            console.log(`Dialog result: ${result}`);
-        });
+        this.dialog.open(JobApplicationComponent, { panelClass: "w-50", data: this.data });
     }
 }
