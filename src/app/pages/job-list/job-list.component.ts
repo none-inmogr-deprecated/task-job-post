@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { BackendService } from "../../services";
-import { IJobList } from "../../models";
+import { IJobItem } from "../../models";
 
 @Component({
     selector: "app-job-list",
@@ -8,7 +8,7 @@ import { IJobList } from "../../models";
     styleUrls: ["./job-list.component.scss"],
 })
 export class JobListComponent implements OnInit {
-    items: IJobList[] = [];
+    items: IJobItem[] = [];
 
     constructor(public backend: BackendService) {}
 
