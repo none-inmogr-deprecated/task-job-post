@@ -1,0 +1,12 @@
+::ng-deep {
+    perfect-scrollbar > .ps {
+        display: flex !important;
+        flex-direction: column !important;
+        flex-grow: 1 !important;
+    }
+    perfect-scrollbar div .ps-content {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+}

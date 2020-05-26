@@ -1,0 +1,61 @@
+.no-select {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+
+.flex-1 {
+    flex: 1 !important;
+}
+
+.logo-image-med {
+    height: 4rem;
+    width: 4rem;
+}
+
+.avatar-image-mini {
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+.avatar-name-mini {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.avatar-job-mini {
+    font-size: 1rem;
+    font-weight: 100;
+}
+
+.menu-item-icon {
+    display: inline-block;
+    height: 1rem;
+    width: 1rem;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.pointer:focus {
+    outline: 0;
+}
+
+.nav-size-main {
+    width: 5rem;
+    text-align: center;
+}
+
+.button-icon-mini {
+    height: 1.5rem !important;
+    width: 1.5rem !important;
+}
+
+.button-icon-mini-content {
+    height: 1rem !important;
+    width: 1rem !important;
+}

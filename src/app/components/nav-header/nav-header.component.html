@@ -1,0 +1,32 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row class="px-4">
+        <div class="h-100 nav-size-main row m-0 justify-content-center align-items-center d-md-inline-flex">
+            <span class="py-3">
+                <strong class="pointer" [routerLink]="['/']">My Logo</strong>
+            </span>
+        </div>
+
+        <span class="flex-grow-1"></span>
+
+        <div class="h-100 row m-0 justify-content-center align-items-center pointer" mat-icon-button [matMenuTriggerFor]="menu">
+            <img [src]="avatar" alt="avatar" class="avatar-image-mini rounded-circle" />
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item [routerLink]="['/']">
+                    <span class="menu-item-icon fas fa-user-circle"></span>
+                    <span class="px-2"></span>
+                    <span>My Profile</span>
+                </button>
+                <button mat-menu-item [routerLink]="['/candidates']">
+                    <span class="menu-item-icon fas fa-clipboard-check"></span>
+                    <span class="px-2"></span>
+                    <span>Candidates</span>
+                </button>
+                <button mat-menu-item>
+                    <span class="menu-item-icon fas fa-sign-out-alt"></span>
+                    <span class="px-2"></span>
+                    <span>Sign out</span>
+                </button>
+            </mat-menu>
+        </div>
+    </mat-toolbar-row>
+</mat-toolbar>

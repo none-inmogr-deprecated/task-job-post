@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="py-4">
+        <!-- SPACER -->
+    </div>
+    <ng-container *ngFor="let item of items">
+        <div class="pointer row my-3 mx-0 p-3 mat-elevation-z8" [routerLink]="['/job/', item.id]">
+            <img [src]="item.companyLogo" alt="logo" class="logo-image-med" />
+            <div class="d-flex flex-column flex-1">
+                <h4 class="font-weight-bold">
+                    {{ item.title }}
+                </h4>
+                <small>
+                    {{ item.shortDesc }}
+                </small>
+            </div>
+            <div class="text-right">
+                <h4>
+                    {{ item.companyName }}
+                </h4>
+                <small class="text-secondary">
+                    {{ item.location }}
+                </small>
+            </div>
+        </div>
+    </ng-container>
+</div>

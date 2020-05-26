@@ -1,0 +1,30 @@
+<div class="container" *ngIf="data">
+    <div class="py-4">
+        <!-- SPACER -->
+    </div>
+    <img [src]="data.companyLogo" alt="logo" class="logo-image-med" />
+    <p>
+        {{ data.companyName }}
+    </p>
+    <small>
+        {{ data.location }}
+    </small>
+    <div class="py-3">
+        <!-- SPACER -->
+    </div>
+    <p class="display-3">
+        {{ data.title }}
+    </p>
+    <div [innerHTML]="data.fullDesc"></div>
+    <div class="py-4">
+        <!-- SPACER -->
+    </div>
+    <div class="text-center">
+        <button mat-raised-button color="primary" (click)="openDialogApplication()" [disabled]="data.applied">
+            {{ data.applied ? "Applied" : "Apply" }}
+        </button>
+    </div>
+    <div class="py-4">
+        <!-- SPACER -->
+    </div>
+</div>
