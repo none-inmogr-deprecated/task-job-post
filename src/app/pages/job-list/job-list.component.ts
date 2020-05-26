@@ -1,4 +1,6 @@
 import { Component, OnInit } from "@angular/core";
+import { BackendService } from "../../services";
+import { IJobList } from "../../models";
 
 @Component({
     selector: "app-job-list",
@@ -6,7 +8,12 @@ import { Component, OnInit } from "@angular/core";
     styleUrls: ["./job-list.component.scss"],
 })
 export class JobListComponent implements OnInit {
-    constructor() {}
+    items: IJobList[] = [];
 
-    ngOnInit(): void {}
+    constructor(public backend: BackendService) {}
+
+    ngOnInit(): void {
+        // NOTE in real life we have pagination
+        this.items = this.backend.getJobList();
+    }
 }
