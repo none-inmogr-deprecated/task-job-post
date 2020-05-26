@@ -27,7 +27,10 @@ import { AppConfigService } from "./services";
 
 import { NavHeaderComponent } from "./components";
 
-import { JobListComponent } from "./pages";
+import {
+    JobListComponent,
+    JobDescriptionComponent,
+} from "./pages";
 
 @NgModule(
     {
@@ -35,6 +38,7 @@ import { JobListComponent } from "./pages";
             AppComponent,
             NavHeaderComponent,
             JobListComponent,
+            JobDescriptionComponent,
         ],
         imports: [
             BrowserModule,
