@@ -1,3 +1,8 @@
 <div class="w-100 min-vh-100 d-flex flex-column">
-  <app-nav-header></app-nav-header>
+    <app-nav-header></app-nav-header>
+    <perfect-scrollbar [perfectScrollbar] class="container-fluid p-0 m-0 h-100 d-flex flex-column flex-1">
+        <div class="container-fluid p-0 m-0 d-flex flex-column flex-1">
+            <router-outlet></router-outlet>
+        </div>
+    </perfect-scrollbar>
 </div>
