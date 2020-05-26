@@ -1,0 +1,82 @@
+{
+    "overrides": [
+        {
+            "files": "*.json",
+            "options": {
+                "printWidth": 10
+            }
+        },
+        {
+            "files": "*.html",
+            "options": {
+                "printWidth": 140
+            }
+        },
+        {
+            "files": "*.js",
+            "options": {
+                "printWidth": 10
+            }
+        },
+        {
+            "files": "*.ts",
+            "options": {
+                "printWidth": 10
+            }
+        },
+        {
+            "files": "e2e/**/*.ts",
+            "options": {
+                "printWidth": 10
+            }
+        },
+        {
+            "files": "src/*.ts",
+            "options": {
+                "printWidth": 10
+            }
+        },
+        {
+            "files": "src/environments/**/*.ts",
+            "options": {
+                "printWidth": 140
+            }
+        },
+        {
+            "files": "src/app/**/*.ts",
+            "options": {
+                "printWidth": 140
+            }
+        },
+        {
+            "files": "src/app/**/*.spec.ts",
+            "options": {
+                "printWidth": 40
+            }
+        },
+        {
+            "files": "src/app/*.module.ts",
+            "options": {
+                "printWidth": 10
+            }
+        },
+        {
+            "files": "src/app/app-routing.module.ts",
+            "options": {
+                "printWidth": 80
+            }
+        }
+    ],
+    "preserve": "never",
+    "tabWidth": 4,
+    "useTabs": false,
+    "semi": true,
+    "singleQuote": false,
+    "trailingComma": "all",
+    "bracketSpacing": true,
+    "jsxBracketSameLine": true,
+    "arrowParens": "always",
+    "proseWrap": "never",
+    "insert_final_newline": true,
+    "trim_trailing_whitespace": true
+}
