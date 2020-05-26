@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { BackendService } from "../../services";
+import { BackendService, AppConfigService } from "../../services";
 import { IJobItem } from "../../models";
 
 @Component({
@@ -10,7 +10,7 @@ import { IJobItem } from "../../models";
 export class JobListComponent implements OnInit {
     items: IJobItem[] = [];
 
-    constructor(public backend: BackendService) {}
+    constructor(public appConfig: AppConfigService, public backend: BackendService) {}
 
     ngOnInit(): void {
         // NOTE in real life we have pagination
