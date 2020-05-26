@@ -15,6 +15,7 @@ export class AppConfigService {
         this.router.events.subscribe((event) => {
             if (event instanceof NavigationEnd) {
                 this.route = event.url;
+                this.scrollRef.scrollToTop();
             }
         });
     }

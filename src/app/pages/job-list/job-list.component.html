@@ -3,7 +3,7 @@
         <!-- SPACER -->
     </div>
     <ng-container *ngFor="let item of items">
-        <div class="pointer row my-3 mx-0 p-3 mat-elevation-z8" [routerLink]="['/job/', item.id]" (click)="appConfig.scrollRef.scrollToTop()">
+        <div class="pointer row my-3 mx-0 p-3 mat-elevation-z8" [routerLink]="['/job/', item.id]">
             <div class="col-1">
                 <img [src]="item.companyLogo" alt="logo" class="logo-image-med" />
             </div>
