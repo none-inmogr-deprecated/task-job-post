@@ -1,4 +1,6 @@
 import { Component, OnInit } from "@angular/core";
+import { IJobItem } from "../../models";
+import { BackendService, AppConfigService } from "../../services";
 
 @Component({
     selector: "app-job-description",
@@ -6,7 +8,14 @@ import { Component, OnInit } from "@angular/core";
     styleUrls: ["./job-description.component.scss"],
 })
 export class JobDescriptionComponent implements OnInit {
-    constructor() {}
+    data: IJobItem;
 
-    ngOnInit(): void {}
+    constructor(public appConfig: AppConfigService, public backend: BackendService) {}
+
+    ngOnInit(): void {
+        const jobs = this.backend.getJobList();
+        const route = this.appConfig.route.split("/");
+        const id = +route[route.length - 1];
+        this.data = jobs.find((item) => item.id === id);
+    }
 }
