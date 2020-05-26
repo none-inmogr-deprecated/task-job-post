@@ -1,0 +1,21 @@
+mat-table {
+    width: 100%;
+    overflow: auto;
+}
+
+mat-row,
+mat-header-row {
+    width: 100%;
+}
+
+mat-header-cell,
+mat-cell {
+    min-width: 15rem;
+}
+
+@media (max-width: 1000px) {
+    mat-row,
+    mat-header-row {
+        width: fit-content;
+    }
+}
