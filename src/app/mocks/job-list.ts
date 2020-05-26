@@ -1,4 +1,6 @@
-export const JobListData = [];
+import { IJobList } from "../models";
+
+export const JobListData: IJobList[] = [];
 
 for (let count = 1; count < 10; count++) {
     JobListData.push({
