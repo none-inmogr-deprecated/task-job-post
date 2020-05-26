@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { NavHeaderData, JobListData } from "../mocks";
+import { NavHeaderData, JobListData, CandidateList } from "../mocks";
 
 @Injectable({
     providedIn: "root",
@@ -7,6 +7,10 @@ import { NavHeaderData, JobListData } from "../mocks";
 export class BackendService {
     getAvatar() {
         return NavHeaderData.avatar;
+    }
+
+    getCandidateList() {
+        return CandidateList;
     }
 
     getJobList() {
